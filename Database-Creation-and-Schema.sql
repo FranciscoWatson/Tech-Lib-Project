@@ -27,8 +27,8 @@ CREATE TABLE Borrowers (
 
 CREATE TABLE Loans (
 	LoanID INT IDENTITY,
-	BookID int FOREIGN KEY REFERENCES Books(BookID) NOT NULL,
-	BorrowerID int FOREIGN KEY REFERENCES Borrowers(BorrowerID) NOT NULL,
+	BookID int NOT NULL,
+	BorrowerID int NOT NULL,
 	DateBorrowed date NOT NULL,
 	DueDate date NOT NULL,
 	DateReturned date,
@@ -36,3 +36,23 @@ CREATE TABLE Loans (
 	FOREIGN KEY (BookID) REFERENCES Books(BookID),
     FOREIGN KEY (BorrowerID) REFERENCES Borrowers(BorrowerID)
 );
+
+
+/* Trigger for Book's CurrentStatus*/
+GO
+CREATE TRIGGER UpdateBookStatus
+ON Loans
+AFTER INSERT,UPDATE 
+AS
+BEGIN
+UPDATE Book SET CurrentStatus =
+	CASE
+		WHEN EXISTS (SELECT * FROM Loans WHERE Loans.BookID = book.BookID AND Loans.DateReturned IS NULL) 
+			THEN 'Borrowed'
+		Else 
+			'Available'
+	END
+	FROM Books AS book
+	WHERE EXISTS(SELECT * FROM inserted WHERE inserted.BookID = book.BookID)
+END 
+GO
