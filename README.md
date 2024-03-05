@@ -30,3 +30,4 @@
 6.  [Database Function - Calculate Overdue Fees](Queries-and-Procedures/6-CalculateOverdueFees-DatabaseFunction.sql)
 7.  [Database Function - Book Borrowing Frequency](Queries-and-Procedures/7-BookBorrowingFrequency-DatabaseFunction.sql)
 8.  [Overdue Analysis](Queries-and-Procedures/8-OverdueAnalysis.sql): List all books overdue by more than 30 days with their associated borrowers.
+9.  [Author Popularity using Aggregation](Queries-and-Procedures/9-RankAuthorsByBorrowingFrequencyOfTheirBooks.sql): Rank authors by the borrowing frequency of their books.
