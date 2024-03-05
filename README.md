@@ -27,4 +27,5 @@
 3.  [Rank Borrowers based on frequency](Queries-and-Procedures/3-RankBorrowersBasedOnFrequency.sql): Rank borrowers based on borrowing frequency.
 4.  [Identify the most popular genre for a given month using Joins and Window Functions:](Queries-and-Procedures/4-MostPopularGenreForAGiveMonth.sql): Rank borrowers based on borrowing frequency.
 5.  [Stored Procedure - Add New Borrowers](Queries-and-Procedures/5-ValidateEmailWhenAddingBorrower.sql)
-6.  [Database Function - Calculate Overdue Fees](Queries-and-Procedures/5-ValidateEmailWhenAddingBorrower.sql)
+6.  [Database Function - Calculate Overdue Fees](Queries-and-Procedures/6-CalculateOverdueFees-DatabaseFunction.sql)
+7.  [Database Function - Book Borrowing Frequency](Queries-and-Procedures/7-BookBorrowingFrequency-DatabaseFunction.sql)
