@@ -32,3 +32,4 @@
 8.  [Overdue Analysis](Queries-and-Procedures/8-OverdueAnalysis.sql): List all books overdue by more than 30 days with their associated borrowers.
 9.  [Author Popularity using Aggregation](Queries-and-Procedures/9-RankAuthorsByBorrowingFrequencyOfTheirBooks.sql): Rank authors by the borrowing frequency of their books.
 10. [Genre Preference by Age using Group By and Having:](Queries-and-Procedures/10-DeterminePreferredGenreOfDifferentAgeGroupsOfBorrowers.sql): Determine the preferred genre of different age groups of borrowers. (Groups are (0,10), (11,20), (21,30)…)
+11. [Stored Procedure - Borrowed Books Report](Queries-and-Procedures/11-BorrowedBooksReport.sql)
