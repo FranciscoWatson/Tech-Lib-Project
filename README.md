@@ -33,3 +33,4 @@
 9.  [Author Popularity using Aggregation](Queries-and-Procedures/9-RankAuthorsByBorrowingFrequencyOfTheirBooks.sql): Rank authors by the borrowing frequency of their books.
 10. [Genre Preference by Age using Group By and Having:](Queries-and-Procedures/10-DeterminePreferredGenreOfDifferentAgeGroupsOfBorrowers.sql): Determine the preferred genre of different age groups of borrowers. (Groups are (0,10), (11,20), (21,30)…)
 11. [Stored Procedure - Borrowed Books Report](Queries-and-Procedures/11-BorrowedBooksReport.sql)
+12. [Trigger Implementation: ](Queries-and-Procedures/12-TriggerToAuditLogTableWhenUpdateBookStatus.sql) Design a trigger to log an entry into a separate AuditLog table whenever a book's status changes from 'Available' to 'Borrowed' or vice versa. The AuditLog should capture BookID, StatusChange, and ChangeDate.
