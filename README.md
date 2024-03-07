@@ -40,3 +40,11 @@
 ## 5. Indexes
 
 [Indexes:](Indexes.sql) Created Indexes to improve performance
+
+### Test Index Speed on Query Nº5
+
+Query:
+
+![image](No5Query.jpg.png)
+
+1. Without Index
