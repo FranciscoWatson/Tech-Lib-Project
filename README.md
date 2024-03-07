@@ -43,8 +43,20 @@
 
 ### Test Index Speed on Query Nº5
 
-Query:
+#### Query:
 
-![image](No5Query.jpg.png)
+![image](Index-Test/No5Query.jpg)
 
-1. Without Index
+#### Index used:
+
+![alt text](Index-test/Index.PNG)
+
+#### When calling this storage Procedure we get
+
+1. Performance Without Index: We can see in the image bellow that the Actual Number of Rows Read is 1006.
+
+![image](Index-Test/PerformanceWithoutIndex.png)
+
+2. Performance With Index: After running this stored procedure with an index, the actual number of rows goes down to only 1. Additionally, the estimated operator, I/O, CPU, and Subtree values are much lower. We can also note that the estimated number of rows to be read decreases significantly from O(n) in the first run (which, in that case, n was 14006) to approximately 9.66667 in the second run. This is close to O(log n), which is the worst-case scenario for a B-tree index.
+
+![image](Index-Test/PerformanceWithIndex.png)
