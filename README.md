@@ -49,7 +49,7 @@
 
 #### Index used:
 
-![alt text](Index-test/Index.PNG)
+![image](Index-Test/IndexUsed.png)
 
 #### When calling this storage Procedure we get
 
