@@ -36,3 +36,27 @@
 12. [Trigger Implementation: ](Queries-and-Procedures/12-TriggerToAuditLogTableWhenUpdateBookStatus.sql) Design a trigger to log an entry into a separate AuditLog table whenever a book's status changes from 'Available' to 'Borrowed' or vice versa. The AuditLog should capture BookID, StatusChange, and ChangeDate.
 13. [SQL Stored Procedure with Temp Table: ](Queries-and-Procedures/14-RetrieveAllBorrowersWhoHaveOverDueBooks.sql) Design a stored procedure that retrieves all borrowers who have overdue books. Store these borrowers in a temporary table, then join this temp table with the Loans table to list out the specific overdue books for each borrower.
 14. [BONUS: Weekly Peak Days: ](Queries-and-Procedures/BONUS-WeeklyPeakDays.sql) The library is planning to employ a new part-time worker. This worker will work 3 days weekly in the library. From the data you have, determine the most 3 days in the week that have the most share of the loans and display the result of each day as a percentage of all loans. Sort the results from the highest percentage to the lowest percentage. (eg. 25.18% of the loans happen on Monday...)
+
+## 5. Indexes
+
+[Indexes:](Indexes.sql) Created Indexes to improve performance
+
+### Test Index Speed on Query Nº5
+
+#### Query:
+
+![image](Index-Test/No5Query.jpg)
+
+#### Index used:
+
+![image](Index-Test/IndexUsed.png)
+
+#### When calling this storage Procedure we get
+
+1. Performance Without Index: We can see in the image bellow that the Actual Number of Rows Read is 1006.
+
+![image](Index-Test/PerformanceWithoutIndex.png)
+
+2. Performance With Index: After running this stored procedure with an index, the actual number of rows goes down to only 1. Additionally, the estimated operator, I/O, CPU, and Subtree values are much lower. We can also note that the estimated number of rows to be read decreases significantly from O(n) in the first run (which, in that case, n was 14006) to approximately 9.66667 in the second run. This is close to O(log n), which is the worst-case scenario for a B-tree index.
+
+![image](Index-Test/PerformanceWithIndex.png)
